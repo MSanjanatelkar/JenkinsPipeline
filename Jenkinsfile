@@ -10,6 +10,7 @@ pipeline {
     stage('connecting to library'){ 
         steps{
             sayHello ''
+            byeHello ''
         }
     }   
     stage('dev'){ 
