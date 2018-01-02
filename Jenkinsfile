@@ -1,24 +1,40 @@
 pipeline {
     agent any
-
-    tools {
+      tools {
        maven 'maven-3.5'
    }
+  
    stages{
-    stage('cloning the code'){ 
+    stage('dev'){ 
         steps{
-            git 'https://github.com/MSanjanatelkar/JenkinsPipeline/tree/master/spring-petclinic'
+            git 'https://github.com/MSanjanatelkar/spring-app.git'
         }
     }
-    stage ('maven build'){
+    stage ('qa'){
         steps{
             sh 'mvn clean install -DskipTests=true'
         }
     }
+    stage('preprod') {
+      steps {
+        parallel(one: {
+                  echo "I'm on the first branch!"
+                 },
+                 two: {
+                   echo "I'm on the second branch!"
+                 },
+                 three: {
+                   echo "I'm on the third branch!"
+                 })
+      }
+    }
+    stage('prod') {
+        steps {
+          echo "Deploying"   
+        }
+    }
   }
-}
-   
-   
+} 
    
 
         
