@@ -7,6 +7,11 @@ pipeline {
    }
   
    stages{
+    stage('connecting to library'){ 
+        steps{
+            sayHello ''
+        }
+    }   
     stage('dev'){ 
         steps{
             git 'https://github.com/MSanjanatelkar/spring-app.git'
