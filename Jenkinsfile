@@ -20,7 +20,7 @@ pipeline {
     }
     stage ('qa'){
         steps{
-            sh 'mvn clean install -DskipTests=true'
+            mvnlib 'false'
         }
     }
     stage('preprod') {
