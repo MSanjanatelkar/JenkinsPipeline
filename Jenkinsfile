@@ -9,7 +9,7 @@ pipeline {
    stages{
     stage('connecting to library'){ 
         steps{
-            sayHello ''
+            scmgit ''
             byeHello ''
         }
     }   
