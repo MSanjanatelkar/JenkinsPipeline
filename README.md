@@ -1,3 +1,3 @@
 # JenkinsPipeline
 Pipeline as code with Jenkins
-merge test branch
+master branch
