@@ -1,3 +1,3 @@
 # JenkinsPipeline
 Pipeline as code with Jenkins
-pet clinic branch
+merge test branch
