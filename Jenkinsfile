@@ -1,3 +1,5 @@
+@Library('pipeline-library-demo')_
+
 pipeline {
     agent any
       tools {
@@ -5,6 +7,12 @@ pipeline {
    }
   
    stages{
+    stage('connecting to library'){ 
+        steps{
+            scmgit ''
+            byeHello ''
+        }
+    }   
     stage('dev'){ 
         steps{
             git 'https://github.com/MSanjanatelkar/spring-app.git'
@@ -12,7 +20,7 @@ pipeline {
     }
     stage ('qa'){
         steps{
-            sh 'mvn clean install -DskipTests=true'
+            mvnlib 'false'
         }
     }
     stage('preprod') {
