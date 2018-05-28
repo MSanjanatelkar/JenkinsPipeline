@@ -2,5 +2,5 @@
 
 Pipeline as code with Jenkin
 
-successful plus
+successful
 
