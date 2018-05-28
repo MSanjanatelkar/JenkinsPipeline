@@ -1,6 +1,3 @@
 # JenkinsPipeline
 
-Pipeline as code with Jenkin
-
-successful
-
+Pipeline as code with Jenkins
