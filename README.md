@@ -1,5 +1,5 @@
 # JenkinsPipeline
 
-Pipeline as code
+Pipeline as a code
 
 
